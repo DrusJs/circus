@@ -874,6 +874,10 @@ body {
     cursor: pointer;
 }
 
+.swiper-button img {
+    width: 100%;
+}
+
 .swiper-wrapper {
     display: flex;
     transition: transform 0.3s ease;
@@ -1456,6 +1460,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.796178vw; /* 10px */
+    cursor: pointer;
 }
 
 .buy-tickets img {
