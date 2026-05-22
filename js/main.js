@@ -195,7 +195,7 @@ for (let phoneInput of phoneInputs) {
     phoneInput.addEventListener('paste', onPhonePaste, false);
 }
 
-
+let zIndex = 3
 document.querySelectorAll('.faq-accordion').forEach(accordion => {
     const head = accordion.querySelector('.faq-accordion-head');
     const dropdown = accordion.querySelector('.faq-accordion-dropdown');
@@ -214,7 +214,8 @@ document.querySelectorAll('.faq-accordion').forEach(accordion => {
         
         if (!isActive) {
             accordion.classList.add('active');
-            accordion.style.zIndex = 3;
+            zIndex++;
+            accordion.style.zIndex = zIndex;
         } else {
             accordion.classList.remove('active');
             setTimeout(() => {            
