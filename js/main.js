@@ -206,7 +206,9 @@ document.querySelectorAll('.faq-accordion').forEach(accordion => {
         document.querySelectorAll('.faq-accordion').forEach(otherAccordion => {
             if (otherAccordion !== accordion && otherAccordion.classList.contains('active')) {
                 otherAccordion.classList.remove('active');
-                otherAccordion.style.zIndex = 0;
+                setTimeout(() => {            
+                    otherAccordion.style.zIndex = 0;
+                }, 350);
             }
         });
         
@@ -217,7 +219,7 @@ document.querySelectorAll('.faq-accordion').forEach(accordion => {
             accordion.classList.remove('active');
             setTimeout(() => {            
                 accordion.style.zIndex = 0;
-            }, 450);
+            }, 350);
         }
     });
 });
