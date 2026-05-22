@@ -369,7 +369,7 @@ body {
 
 .director-info-bg {
     position: absolute;
-    top: 0;
+    top: 1vw;
     width: 69.904459vw; /* 878px */
     height: auto;
     z-index: -1;
@@ -588,13 +588,15 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    overflow: hidden;
     max-height: 44.585987vw; /* 560px */
 }
 
 .faq-accordion {
     margin-top: -0.159236vw; /* -2px */
+    position: relative;
+    max-height: 3.821656vw;
 }
+
 
 .faq-accordion:first-child {
     margin-top: 0;
@@ -614,8 +616,65 @@ body {
     min-height: 3.821656vw; /* 48px */
 }
 
+.faq-accordion-dropdown {
+    padding: 0 2.547771vw;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    transition: 260ms ease-in-out;
+    max-height: 0;
+    background-image: url("../img/faq-accordion-center.png");
+    background-position: top left;
+    background-size: 100%;
+    background-repeat: repeat-y;
+}
+
+.faq-accordion-dropdown p {
+    background: #E5D38A;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-size: 1.433121vw; /* 18px */
+    font-family: var(--font-secondary);
+    font-weight: 700;
+}
+
 .faq-accordion-head img {
     width: 100%;
+}
+
+.faq-accordion.active .faq-accordion-dropdown {
+    padding: 2vw 2.547771vw 2vw;
+    max-height: 70vw;
+}
+.faq-accordion.active .faq-accordion-dropdown::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: -0.3vw;
+    left: 0;
+    z-index: 2;
+    height: 2.3vw;
+    background-image: url("../img/faq-accordion-top.png");
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.faq-accordion.active .faq-accordion-dropdown::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: -0.3vw;
+    left: 0;
+    z-index: 2;
+    height: 2.3vw;
+    background-image: url("../img/faq-accordion-bottom.png");
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .faq-question {
@@ -631,6 +690,11 @@ body {
 
 .faq-arrow {
     filter: drop-shadow(0px 0px 7.1px rgba(229, 149, 2, 0.8));
+    transition: 260ms ease-in-out;
+}
+
+.faq-accordion.active .faq-arrow {
+    transform: rotate(180deg);
 }
 
 .rules-inner {

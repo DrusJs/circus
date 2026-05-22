@@ -244,3 +244,21 @@ for (let phoneInput of phoneInputs) {
     phoneInput.addEventListener('input', onPhoneInput, false);
     phoneInput.addEventListener('paste', onPhonePaste, false);
 }
+
+
+document.querySelectorAll('.faq-accordion').forEach(accordion => {
+    const head = accordion.querySelector('.faq-accordion-head');
+    const dropdown = accordion.querySelector('.faq-accordion-dropdown');
+    
+    head.addEventListener('click', () => {
+        accordion.classList.toggle('active');
+        
+        if (accordion.classList.contains('active')) {
+            accordion.style.zIndex = 3;
+        } else {
+            setTimeout(() => {            
+                accordion.style.zIndex = 0;
+            }, 450);
+        }
+    });
+});
