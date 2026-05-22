@@ -589,6 +589,10 @@ body {
     min-height: 3.821656vw; /* 48px */
 }
 
+.faq-accordion-head img {
+    width: 100%;
+}
+
 .faq-question {
     background: var(--linear-gradient-text-dark);
     -webkit-background-clip: text;
@@ -1396,6 +1400,12 @@ body {
     padding: 2.866242vw 1.592357vw 0.796178vw; /* 36px 20px 10px */
 }
 
+.infosec-form form {
+    width: 100%;
+    max-width: 44.585987vw;
+    margin: 0 auto;
+}
+
 .infosec-form-bg {
     position: absolute;
     width: 100%;
@@ -1417,6 +1427,10 @@ body {
 }
 
 .infosec-form-row input {
+    width: 100%;
+}
+
+.infosec-form-row .route-input {
     width: 100%;
 }
 
@@ -1689,6 +1703,11 @@ body {
     border-radius: 1.035032vw; /* 13px */
     border: 0.079618vw solid #797D77; /* 1px */
     gap: 0.875796vw; /* 11px */
+}
+
+.route-input svg {
+    width: 1.273885vw;
+    height: 1.273885vw;
 }
 
 .route-social-form-action .route-input {
