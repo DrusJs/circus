@@ -83,6 +83,25 @@ body {
     color: var(--color-white);
     text-decoration: none;
     white-space: nowrap;
+    position: relative;
+}
+
+.navigation-item.active {
+    color: #FDF0D7;
+}
+
+.navigation-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.955414vw;
+    width: 5.175159vw;
+    height: 0.796178vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("../img/svg/menu-active.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .header-button {
